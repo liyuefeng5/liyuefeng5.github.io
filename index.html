@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:archer="http://java.sun.com/jsf/archer"
+	xmlns:pm="http://primefaces.org/mobile"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:sec="http://www.springframework.org/security/facelets/tags"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:o="http://omnifaces.org/ui"
+	xml:lang="en" lang="en">
+	<h:head>
+		<title>【钱满仓】女神驾到，不得无礼</title>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta name="renderer" content="webkit"/>
+		<meta http-equiv="keywords" content="enter,your,keywords,here" />
+		<meta http-equiv="description"
+			content="A short description of this page." />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="#{tplVars.themeStylePath}/pc/land19.css?version=0119"/>
+				<link rel="shortcut icon" type="image/ico"
+				href="#{request.contextPath}/favicon.ico" />
+			<link rel="icon" type="image/x-icon"
+				href="#{request.contextPath}/favicon.ico" />
+			<script type="text/javascript" charset="utf-8">
+				//检测平台，如果是手机访问，就跳转到手机站
+				//<![CDATA[
+				/*
+				 * 智能机浏览器版本信息:
+				 *
+				 */
+				var browser = {
+					versions : function() {
+						var u = navigator.userAgent, app = navigator.appVersion;
+						return {//移动终端浏览器版本信息 
+							trident : u.indexOf('Trident') > -1, //IE内核
+							presto : u.indexOf('Presto') > -1, //opera内核
+							webKit : u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+							gecko : u.indexOf('Gecko') > -1
+									&& u.indexOf('KHTML') == -1, //火狐内核
+							mobile : !!u.match(/Mobile/), //是否为移动终端
+							ios : !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+							android : u.indexOf('Android') > -1
+									|| u.indexOf('Linux') > -1, //android终端或者uc浏览器
+							iPhone : u.indexOf('iPhone') > -1
+									|| u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+							iPad : u.indexOf('iPad') > -1, //是否iPad
+						};
+					}(),
+					language : (navigator.browserLanguage || navigator.language)
+							.toLowerCase()
+				}
+				if (browser.versions.mobile) {
+					location.href = "#{request.contextPath}/mobile/mobile_landing_page19";
+				}
+				//]]>
+			</script>
+	</h:head>
+	<h:body>
+	  <div class="banner-container">
+		   <div class="wrap">
+		      <p class="active-time">03月01日 10:00 — 03月15日 21:00</p>
+		      <a href="#{request.contextPath}/loan-list" class="href top-href"></a>
+		   </div>
+	  </div> 
+	  <div class="con-contaier">
+	      <div class="wrap">
+	          <div class="act-tit">活动规则</div>
+	          <p class="act-rules">1. 活动期间，每位注册用户分别发放：一年大顺 <span>1.6%</span> 和好事成双  <span>2.2% </span>加息券各一张。活动期间使用任何一张加息券后，自动补发相应额度的加息券一张，<br/>
+直至活动结束。<br/>2.  活动期间礼品：<br/>
+          <i></i>（1）投资6个月项目每满 <span>1万元</span>，送富平吊饼一份 				
+          <img class="act-img act-img-1" src="#{tplVars.themeImagePath}/pc/active/diaobin.png" />
+          <br/>      
+          <i></i>（2）投资6个月项目每满 <span>2万元</span>，送乡宁山药一份 <img class="act-img act-img-2" src="#{tplVars.themeImagePath}/pc/active/shanyao.png" /><br/>
+          <i></i>（3）投资6个月项目每满 <span>3万元</span>，送速发海参一份  <img class="act-img act-img-3" src="#{tplVars.themeImagePath}/pc/active/haishen.png" />                 <br/>
+          备注：礼品可自由组合， <span>举个例子: </span>投资6万元，可获得富平吊饼、乡宁山药、速发海参各一份，其他投资奖励以此类推。<img class="act-img act-img-4" src="#{tplVars.themeImagePath}/pc/active/38all-img.png" /> <br/>
+3. 活动期间，参加高端理财的用户仅可获得一次奖励机会，礼品为速发海参一份，丝绒围巾一份，但不参与其他优惠活动。 <br/>
+4. 活动所得实物礼品，将于活动结束后5个工作日内统一联系发放，请投资用户提前联系在线客服预留收货地址；<br/>
+5. 债权转让项目不参与本活动；<br/>
+6. 活动所得加息券，有效期7天，过期不补，使用方法请在“个人中心”>>“我的优惠券”中查看；<br/>
+7. 钱满仓已上线反欺诈系统，活动期间利用欺诈手段获得活动福利的行为，一经查证，将会取消获奖资格，本活动最终解释权归钱满仓所有。<br/>
+ <span>免责声明：</span>对于以上礼品食用有禁忌者，请谨慎食用。因货到后日久未食引起的食品过期或食用引起的身体不适等状况，本司不为此承担任何责任，特此敬告，以免发生不必要的纠纷。
+ </p>
+ <div class="act-tit" style="margin-top:78px">活动礼品</div>
+ 		      <ul class="item-wrap">
+ 		         <li class="item item1">
+ 		            <div class="mask">
+ 		                <p class="text-top"><span>优点：</span><br/>
+产地蓬莱湾子口，零污染野生海参，不圈养<br/>不喂药，泡发后劲透软弹。</p>
+ <p class="text-bottom"><span>主要功能：</span><br/>
+1.延续衰老，提高免疫力；<br/>
+2.补血调经；<br/>
+3.调节血糖，预防心血管疾病；</p>
+ 		            </div>
+ 		         </li>
+ 		          <li class="item mid item2">
+ 		            <div class="mask">
+ 		                <p class="text-top"><span>优点：</span><br/>
+产地临汾乡宁，口感“柔”“软”“甜”<br/>“绵”，是山药中的良品。</p>
+ <p class="text-bottom"><span>主要功能：</span><br/>
+1.减肥美容，护肤养颜<br/>
+2.滋补健身，延缓衰老；<br/>
+3.补虚、降血糖，治疗糖尿病；<br/>4.防霾；</p>
+ 		            </div>
+ 		         </li>
+ 		          <li class="item item3">
+ 		            <div class="mask">
+ 		                <p class="text-top"><span>优点：</span><br/>
+产地陕西富平，自然悬挂上霜；香甜软糯不腻，无添加防腐剂。作为养生佳品，常出口国外。</p>
+ <p class="text-bottom"><span>主要功能：</span><br/>
+1.孕产妇的保健佳品、助消化、增进食欲、涩肠止血；<br/>
+2.有助降低血压、软化血管；<br/>
+3.治疗缺碘引起的甲亢；</p>
+ 		            </div>
+ 		         </li>
+ 		         <li class="lipin">礼品：速发海参  <em></em>零售价：268元 </li>
+ 		         <li class="lipin mid">礼品：乡宁山药 <em></em> 零售价：128元</li>
+ 		         <li class="lipin">礼品：富平吊饼  <em></em>零售价：70元 </li>
+ 		      </ul>
+ 		       		      <a href="#{request.contextPath}/loan-list" class="href bottom-href"></a>
+ 		      
+	      </div>
+	   </div>
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	</h:body>
+</html>
