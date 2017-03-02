@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<title>武汉六点整北斗科技有限公司</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link type="text/css" href="css/common.css" rel="stylesheet">
+<link type="text/css" href="css/global.css" rel="stylesheet">
+</head>
+<body>
+<div class="warp">
+     <!--导航部分------------------------------------------------>
+     <div class="box-nav ">
+         <div class="container">
+             <ul id="nav">
+                 <li><a href="home.html">首页</a></li>
+                 <li><a href="boxes.html">频安盒子</a></li>
+                 <li><a href="download.html">下载App</a></li>
+                 <li><a href="about_us.html" class="active">关于我们</a></li>
+             </ul>
+             <div class="logo-box">
+                 <a class="logo" href="home.html"></a>
+             </div>
+         </div>
+     </div>
+     <!--地图部分------------------------------------------------>
+     <div class="map" id="map"></div>
+     <div class="us_info clearfix">
+         <div class="container">
+              <dl>
+                  <dt><img  src="img/icon/us-1.png"/></dt>
+                  <dd>027-87256313</dd>
+              </dl>
+              <dl>
+                  <dt><img  src="img/icon/us-2.png"/></dt>
+                  <dd>武汉市武昌区中南一路50号<br />测绘局大楼3层</dd>
+              </dl>
+              <dl>
+                  <dt><img  src="img/icon/us-3.png"/></dt>
+                  <dd>service@bidostar.com</dd>
+              </dl>
+         </div>
+     </div>
+     <!--底部分------------------------------------------------>
+     <div class="box-footer">
+          <div class="container">
+             <dl>
+                 <dt><img class="f-logo" src="img/icon/f-logo.png"</dt>
+                 <dd>
+                     <div class="f-link">
+                         <a href="http://weibo.com/5840524072" target="_blank" class="ico-weibo"></a>
+                         <a href="javascript:void();" class="ico-weixin"></a>
+                         <a href="http://baike.baidu.com/item/武汉六点整北斗科技有限公司" target="_blank" class="ico-baidu"></a>	
+                     </div>
+                 </dd>
+                 <dd class="complice">武汉六点整北斗科技有限公司</dd>
+             </dl>
+         </div>
+     </div>
+     <!--------------------------------------------------------->
+     <div class="modal" id="myModal">
+          <div class="modal-content">
+            <span class="closeBtn"></span>
+            <img src="img/img-weixin.png" />
+	    </div>
+	 </div>
+     <!--------------------------------------------------------->
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/utility.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?ak=6f625c6afa8432c9e6bdee70b21f10c2&v=2.0"></script>
+<script type="text/javascript">
+    // 百度地图API功能
+	function G(id) {
+		return document.getElementById(id);
+	}
+	var map = new BMap.Map("map");    // 创建Map实例
+	var point = new BMap.Point(114.335405,30.545916);  // 创建点坐标
+	map.centerAndZoom(point, 20);  // 初始化地图,设置中心点坐标和地图级别
+	//map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	var marker = new BMap.Marker(point);        // 创建标注  
+　　 map.addOverlay(marker);             
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	 // 添加带有定位的导航控件
+	var navigationControl = new BMap.NavigationControl({
+	    // 靠左上角位置
+	    anchor: BMAP_ANCHOR_TOP_LEFT,
+	    // LARGE类型
+	    type: BMAP_NAVIGATION_CONTROL_LARGE,
+	    // 启用显示定位
+	    enableGeolocation: true
+	});
+	map.addControl(navigationControl);
+</script>
+</body>
+</html>

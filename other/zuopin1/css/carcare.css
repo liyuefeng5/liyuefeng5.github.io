@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+.banner-store,.contacts .container-contact{margin-bottom:30px}#allmap1,.banner-store{width:100%;height:400px}#header-top .pull-right a,#orderInfo-address-add,#orderInfo-address-add:hover,#selectStyleLists-menu li a,.banner .btn,.th a{text-decoration:none}body{font-family:"Microsoft Yahei";font-size:16px}.contacts hr{margin-left:30px;margin-right:30px}#allmap1{border-bottom:1px solid #dbdbdb}.banner-store{border:1px solid #000}#allmap2{height:700px;width:100%}.installStep{margin:20px 0}.installStep .title{display:block;height:43px;margin:15px auto;font-size:14px;text-align:center;line-height:40px;border:1px solid #e9e9e9;background-color:#f2f2f2}.installStep .body img{margin:30px auto;display:block}.installStep .body .body_img,.installStep .body .body_img img,.installStep .body .body_step,.installStep .body .body_step img{display:inline-block}.installStep .body .body_img img{margin:30px auto}.installStep .body .body_step{font-size:24px;margin:0 120px}.installStep .body .body_step span,.installStep .step span{display:inline-block;height:30px;line-height:30px;margin-left:15px}.installStep .step{display:block;margin:0 auto 30px;height:30px;vertical-align:middle;text-align:center;font-size:18px}.media-body,.media-left,.media-right{display:table-cell;vertical-align:middle;text-align:left;margin-top:60px}#choicecar-brand-lists,.car-logo{vertical-align:top}#purchase_body a,.car-logo,{display:inline-block}.store-select{width:150px;height:30px;margin:15px 0}#search-store{padding:5px 20px;margin-left:30px}.check-order-list{border:2px solid #e3e3e3;padding:15px;margin-right:20px;display:inline-block;margin-bottom:15px;width:330px;height:220px;overflow-y:auto;cursor:pointer}.check-order-list:hover{border-color:#37bdd6}.order-pay-style:hover{background: #fff;border:2px solid #37bdd6;}.order-pay-style{cursor:pointer;display:inline-block;width: 166px;height:41px;padding:5px 25px;border:2px solid #e3e3e3;}.order-pay-style.selected{border:2px solid #37bdd6;}.check-order-list.default,.check-order-list.selected{border-color:#37bdd6;}#buttons-menu{position:relative;right:-15px}#buttons-menu .header-name{font-size:15px;font-weight:400;padding:17px 5px}#buttons-menu .btn-exit{padding-left:5px;margin-top:0}#buttons-menu #header-login-btn,#buttons-menu #header-register-btn{margin-top:10px}#choicecar-details{font-weight:400;margin-bottom:20px;margin-top:9px;color:#37bdd6}.car-logo{margin-top:10px;width:55px;border:0}#selectBrandLists{margin:35px 0 25px 20px}#selectBrandLists .select-brand-list{width:183px;height:90px;border:1px solid #e3e3e3;float:left;line-height:90px;text-align:center;font-weight:400;font-size:14px;cursor:pointer;margin:0 15px 10px 0}#selectModelLists .select-model-list,#selectStyleLists .select-style-list,#selectYearLists .select-year-list{float:left;font-weight:400;height:60px;text-align:center;font-size:14px;cursor:pointer}#selectBrandLists .select-brand-list:hover{border:1px solid #37bdd6}#selectBrandLists .select-brand-list.active{border:1px solid #37bdd6;background:url(../img/active-icon.png) 158px 65px no-repeat}#selectModelLists{margin:35px 0 25px 20px}#selectModelLists .select-model-list{width:183px;border:1px solid #e3e3e3;line-height:60px;margin:0 15px 10px 0}#selectModelLists .select-model-list:hover{border:1px solid #37bdd6}#selectModelLists .select-model-list.active{border:1px solid #37bdd6;background:url(../img/active-icon.png) 158px 30px no-repeat}#selectYearLists{margin:35px 0 25px 20px}#selectYearLists .select-year-list{width:183px;border:1px solid #e3e3e3;line-height:60px;margin:0 15px 10px 0}#selectYearLists .select-year-list:hover{border:1px solid #37bdd6}#selectYearLists .select-year-list.active{border:1px solid #37bdd6;background:url(../img/active-icon.png) 158px 30px no-repeat}#selectStyleLists{margin:10px 0 70px 20px}#selectStyleLists .select-style-list{width:250px;border:1px solid #e3e3e3;line-height:55px;margin:0 14px 15px 0}#selectStyleLists .select-style-list:hover{border:1px solid #37bdd6}#selectStyleLists .select-style-list.active{border:1px solid #37bdd6;background:url(../img/active-icon.png) 225px 30px no-repeat}#orderInfo-address-add-dlg,#orderInfo-address-edit-dlg,#selectBrandTitle,#selectModelTitle,#selectStyleTitle,#selectYearTitle{font-weight:400;color:#333;text-align:left;height:67px;font-size:18px;font-family:Microsoft YaHei;text-indent:25px}#selectStyleLists-menu{margin:0 20px}#selectStyleLists-menu ul{padding-left:0;border-bottom:1px solid #e0e0e0;height:50px;margin-bottom:20px}#selectStyleLists-menu li{list-style:none;float:left;font-size:14px;width:60px;height:15px;border-right:1px solid #e0e0e0;line-height:15px;margin-top:15px}#selectStyleLists-menu li a{display:inline-block;text-align:center;width:60px;color:#000}#selectStyleLists-menu li a.active,#selectStyleLists-menu li a:hover{color:#37bdd6}#selectModelTitle .select-brand,#selectModelTitle .select-model,#selectModelTitle .select-year,#selectStyleTitle .select-brand,#selectStyleTitle .select-model,#selectStyleTitle .select-year,#selectYearTitle .select-brand,#selectYearTitle .select-model,#selectYearTitle .select-year{color:#37bdd6;margin-left:5px}#confirm-model-title{font-weight:400;color:#333;text-align:left;height:67px;font-size:18px;font-family:Microsoft YaHei;text-indent:25px}#orderInfo-address-add:hover{border:1px solid #37bdd6}.sdsp-01{color:#f30}.sdsp-02{color:#656d78}.car-zs{line-height:38px}.car-fg{width:100%;display:block;height:1px;margin-bottom:0}.spcxlb table,td,th{text-align:center}.spcxlb{margin-top:10px}.table-list{border1:1px solid red;float:left;margin-top:15px;margin-bottom:10px;margin-left:228px}.car-list{height:auto;overflow:hidden;margin-bottom:60px}div.th{background:#fbfbfb;height:34px;clear:both;border:1px solid #ddd}.table-list td{width:185px;color:#656d78;font-size:14px;height:30px}.car-name{height:auto;overflow:hidden;border:1px solid #DDD;position:relative;border-top:0;min-height:84px}.left-title div{padding-left:30px;padding-top:16px;display:table-cell;vertical-align:middle}.left-title span{margin-left:16px;color:#656d78;font-size:14px;font-weight:700;vertical-align:middle}.left-title img{width:40px;border:0;vertical-align:middle}.left-title{border-right:1px solid #DDD;background:#fdfdfd;float:left;width:200px;position:absolute;height:100%;left:0;top:0}.th a{font-family:Arial;float:left;width:100%;height:34px;line-height:34px;text-indent:90px;color:#666;font-size:20px;font-weight:700;text-align:left}.banner,.dia-sub-tip,.dialog-head{text-align:center}#header-middle,footer h3{font-family:Microsoft YaHei}.modal-dialog{width:540px}.index-body,.index-title{display:inline-block}.carousel-caption{bottom:150px;}#videoModal .modal-header{min-height:0;padding:15px;border-bottom:none}#choicecar-model,#choicecar-style{margin-left:8px}.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover{z-index:2;color:#fff;cursor:default;background-color:#37bdd6;border-color:#37bdd6}.btn:focus{outline:0}.inputxt.has-error{border-color:#a94442;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}::-webkit-input-placeholder{color:#a9a9a9}::-moz-placeholder{color:#a9a9a9}:-ms-input-placeholder{color:#a9a9a9}input:-moz-placeholder{color:#a9a9a9}footer{background:#303030}footer h3{color:#e1e1e1;font-size:14px;margin-bottom:17px}footer p,footer p a{color:#848484}footer p{font-size:12px;margin-bottom:10px}footer p a:hover{color:#37bdd6}#header{background-color:#fff;border-bottom:1px solid #eee;font-size:18px;font-weight:400}#header-top{color:#acacac;font-size:16px}#header-top .pull-right{margin-top:10px}#header-top .pull-right span{display:inline-block;height:16px;width:110px;line-height:16px;border-right:1px solid #acacac}#header-top .pull-right a{display:inline-block;color:#acacac;padding:0;margin:0}#header-top .pull-right a:hover{color:#37bdd6;text-decoration:none}#header-middle{font-size:18px}.navbar{margin-bottom:0}#brand{height:80px;width:144px;padding:10px 18px 20px 1px;display:block}.navbar-default .navbar-collapse{background:0 0;box-shadow:none}nav .navbar-nav.navbar{cursor:pointer!important}nav .navbar-nav.navbar li{margin:0 25px}nav .navbar-nav.navbar li a{padding:15px 0 0}.navbar-nav{top:12px;left:30px}.active{color:#37bdd6}.navbar-default .navbar-nav.navbar>.active>a{background:0 0}#header-bottom .navbar-nav.navbar>.active>a,#header-bottom .navbar-nav.navbar>li>a:hover{border-bottom:none;padding-bottom:8px;color:#37bdd6}.navbar-default .navbar-nav.navbar>.active>a,.navbar-default .navbar-nav.navbar>li>a:hover{padding-bottom:8px;color:#37bdd6}#login,.navbar-default .navbar-nav.navbar.navbar-right>li>a,.navbar-default .navbar-nav.navbar>li>a{font-weight:400;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out;cursor:pointer}.navbar-default .navbar-nav.navbar.index-nav>li>a{color:#fff}.navbar-default .navbar-nav.navbar.index-nav>.active>a,.navbar-default .navbar-nav.navbar.index-nav>li>a:hover{padding-bottom:8px;color:#37bdd6}.banner{position:relative;width:100%;overflow:auto;font-size:18px;line-height:24px;color:rgba(255,255,255,.6);text-shadow:0 0 1px rgba(0,0,0,.05),0 1px 2px rgba(0,0,0,.3);background:#5b4d3d;box-shadow:0 1px 2px rgba(0,0,0,.25)}.banner .arrows,.banner .dots,.dialog,.gray-bg{position:absolute}.banner ul{list-style:none;margin:0;padding:0}.banner ul li{display:block;float:left;min-height:350px;-ms-background-size:100% 100%;background-size:100% 100%;box-shadow:inset 0 -3px 6px rgba(0,0,0,.1)}.banner .inner{padding:160px 0 110px}.banner h1,.banner h2{font-size:40px;line-height:52px;color:#fff}.banner .btn{display:inline-block;margin:25px 0 0;padding:9px 22px 7px;clear:both;color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;border:2px solid rgba(255,255,255,.4);border-radius:5px}.banner .btn:hover{background:rgba(255,255,255,.05)}.banner .btn:active{-webkit-filter:drop-shadow(0 -1px 2px rgba(0,0,0,.5));filter:drop-shadow(0 -1px 2px rgba(0, 0, 0, .5))}.banner .btn,.banner .dot{-webkit-filter:drop-shadow(0 1px 2px rgba(0,0,0,.3));filter:drop-shadow(0 1px 2px rgba(0, 0, 0, .3))}.banner .dots{left:0;right:0;bottom:20px}.banner .dots li{display:inline-block;width:16px;height:16px;background:url(../img/circle.png) no-repeat;margin:0 4px;text-indent:-999em;cursor:pointer;opacity:.4;-webkit-transition:background .5s,opacity .5s;transition:background .5s,opacity .5s}.banner .dots li.active{background:url(../../img/circle.png) 0 100% no-repeat;opacity:1}.banner .arrows{bottom:20px;right:20px;color:#fff}.banner .arrow{display:inline;padding-left:10px;cursor:pointer}.gray-bg{background:#787878;opacity:.5;filter:alpha(opacity=90);top:0;left:0;width:100%;height:100%;min-height:740px}.dialog{width:460px;min-height_:200px;border:1px solid #ddd;top:200px;left:50%;margin-left:-230px;background:#fefefe;box-shadow:0 0 10px #333}.close-ico,.close-ico span{width:24px;height:24px;display:inline-block}.dialog-head{position:relative;padding:10px;border-bottom:2px solid #f4f4f4;background:url(../img/subscribe-bg.png) repeat-x}.dia-title{font-size:16px;font-weight:700;line-height:1.5;color:#000}.close-ico{position:absolute;top:13px;right:10px;color:#ff7e00;font-weight:700;cursor:pointer;text-indent:0;margin-top:-10px}.close-ico span{background:url(../img/close-icon.png)}.close-ico:hover{background-position:0 -20px}.dialog-con{padding:0}.dia-form-tip,.dia-sub-tip .dia-st-tip{font-size:14px;line-height:1.5;color:#333;margin-bottom:10px}.dia-sub-tip .dialog-head{display:none}#forgetPsd .control-content,#forgetPsd .form-control,#orderInfo .orderInfo-address,.single-page .form-signin-heading span{display:inline-block}.dia-sub-tip .dia-st-tip{margin-bottom:20px;padding-top:20px}.dia-sub-tip .dialog-con{padding:0}#address_dlg label{font-weight:400}.dialog-head{height:60px;line-height:60px;font-size:20px;font-weight:700;color:#000;margin:15px 30px 0}.single-page{background-color:#efefef;font-size:16px}.single-page .container form{border:1px solid #e3e3e3;margin:20px auto 180px;background-color:#fff}.single-page .form-signin-heading{margin:0 15px;padding:0;height:65px;line-height:65px;border-bottom:1px solid #e1e1e1;font-size:18px;font-family:"Microsoft Yahei";font-weight:400}#forgetPsd label,#register label,#registerSucStep1 label,#registerSucStep2 label{font-weight:400}#orderInfo .orderInfo-group{margin:20px 0 20px 15px}#orderInfo .orderInfo-title{margin:15px 0}#orderInfo .radio.selected{background-color:#fff0e8;border:1px solid #f50}#orderInfo .orderInfo-address{height:34px;line-height:34px;vertical-align:middle}#orderInfo .orderInfo-address input{display:inline-block;height:27px;line-height:34px}#orderInfo table tbody td,#orderInfo table thead th{text-align:left}#orderInfo .radio{padding-top:0}#purchase img{margin:15px;cursor:pointer}
+#purchase img.active{border:1px solid red}
+#loginPage .nav{margin: 0 30px;}
+#loginPage .nav-tabs>li.active>a, #loginPage .nav-tabs>li.active>a:focus, #loginPage .nav-tabs>li.active>a:hover {
+    color: #555;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+#loginPage .nav>li>a {
+    color: #000;
+}
+//ï¿½ï¿½ï¿½ï¿½
+body{min-width:1120px;}
+img{ border:0}
+*{ margin:0; padding:0}
+li{ list-style: none;}
+.fl{ float: left;}
+.fr{float: right;}
+#bg1{  width:100%; height:569px;}
+#area1{width:1000px; height:569px;  position:relative;}
+#area1 img{ width: 1920px;margin: 0 auto;}
+
+#bg2{background:#FFFDF5 ; clear: both; margin:0 auto; width:100%; height:550px;}
+#area2{width:980px; height:550px; margin:0 auto; position:relative; }
+.insuranceText{ text-align: right; width: 775px;position: relative;top: 174px;  }
+.insuranceText h1{font: 400 36px/70px 'microsoft yahei'; color: #303030; margin-bottom: 10px;}
+.insuranceText span{font: 400 46px/70px 'microsoft yahei'; color: #ea6900;margin-bottom: 10px;}
+.insuranceText p{ font: 400 20px/30px 'microsoft yahei'; color: #949494; }
+.insuranceImg{ height: 311px; margin-top: -31px;}
+
+#bg3{background:#FFFDF5 ;clear: both; margin:0 auto; width:100%; height:550px;}
+#area3{width:980px; height:550px; margin:0 auto; position:relative;}
+.inImgleft h1{font: 400 36px/70px 'microsoft yahei'; color: #303030; margin-bottom: 10px;}
+.inImgleft span{font: 400 46px/70px 'microsoft yahei'; color: #ea6900;margin-bottom: 10px;}
+.inImgleft p{ font: 400 20px/30px 'microsoft yahei'; color: #949494; }
+.inImgleft{margin-top: 223px;padding-left: 61px;}
+.inImgright{margin-top: 223px;}
+
+#bg4{background:#FFFDF5 ;border: 1px solid #fffdf5; margin:0 auto; width:100%; height:833px;}
+#area4{width:980px; height:729px; margin:0 auto; position:relative;}
+.insuh1{font: 400 36px/70px 'microsoft yahei'; color: #ea6900; text-align: center;margin-top: 92px;margin-left: 118px;}
+.insup{ width: 1143px; height:605px; margin: 22px auto;}
+
+#bg5{ background:#fff; clear: both; margin:0 auto; width:100%; height:581px;}
+#area5{width:1200px; height:581px; margin:0 auto; position:relative;.areah2}
+.insupul{margin-top: -33px;padding-left: 38px;text-align: center;}
+.insupul li .area5p{font: 400 20px/38px 'microsoft yahei'; color: #3f3f3f;}
+.insupul li .area5p1{font: 400 16px/30px 'microsoft yahei'; color: #3f3f3f;}
+.areah2{font: 400 50px/30px 'microsoft yahei'; color: #080808; text-align: center; margin-top: 94px;
+}
+.insupp{width: 1000px; height:147px; margin: 83px auto;}
+.insuranceImgs{ clear: both; margin: 0;} 
+.insupp img{ margin: 0 auto; width: 1000px;}
+
+//ä¼˜é€‰æœ‰ä¿
+
+.area1 img{ margin: 0 auto; width: 1920px; border: 1px solid #D5D4CB;}
+.area2s{width:980px; height:569px; margin:0 auto; position:relative;     padding-top: 105px; }
+.yuob {border-bottom: 1px dashed #D5D4CB; height: 550px; width: 100%;margin: 0 auto;  background: #FFFCF4;}
+.yaobText{ text-align: right; width: 390px;height: 429px;   }
+.yaobImg{ width: 507px; height:389px; margin: 0 auto;}
+.yaobText h1{ font: 400 46px/70px 'microsoft yahei'; color: #4caad2; margin-bottom: 10px; padding-top: 64px;}
+.yaobText p{ font: 400 20px/20px 'microsoft yahei'; color: #b0aca7; margin-top: 15px; }
+
+.yaobText1{ text-align: left; width: 531px;height: 429px;}
+.yaobImg1{ width: 437px; height: 312px; text-align: right;}
+.yaobText1 h1{ font: 400 46px/70px 'microsoft yahei'; color: #4caad2; margin-bottom: 10px; padding-top: 73px;}
+.yaobText1 p{ font: 400 20px/20px 'microsoft yahei'; color: #b0aca7;  margin-top: 15px;}
+.yaobText1 span{ font: 400 51px/20px 'microsoft yahei'; color: #df6812;}
+.yaobText1 .yaospam{font: 400 20px/20px 'microsoft yahei'; color: #b0aca7;  padding-top: 18px;}
+.yaospam a{font: 400 20px/20px 'microsoft yahei';color: #4caad2; text-decoration: underline;}
+.spans{ padding-right: 45px; font: 400 55px/70px 'microsoft yahei'; color: #4caad2; margin-bottom: 10px; padding-top: 208px;}
+.bg5s{ background:#fff; clear: both; margin:0 auto; width:100%; height:640px;}
+.area5s{width:1200px; height:640px; margin:0 auto; position:relative;.areah2}
+.area5s .insupul{margin-top: -33px;text-align: center; width: 1200px;}
+.area5s .insupul li{ float: left;width:222px;}
+.area5s .insupul li .area5p{font: 400 20px/38px 'microsoft yahei'; color: #3f3f3f;}
+.area5s .insupul li .area5p1{font: 400 16px/30px 'microsoft yahei'; color: #adadac;    width: 202px;}
+.area5s .areah2{font: 400 50px/30px 'microsoft yahei'; color: #080808; text-align: center; padding-top: 106px;}
+.insupp{width: 1000px; height:147px;margin: 95px auto;}
+.insuranceImgs{ clear: both; margin: 0;} 
+#bg3s{ background:#F0F4FA; clear: both; margin:0 auto; width:100%; height:538px;}
+#area3s{width:1260px; height:538px; margin:0 auto; position:relative;}
+.yaobinput{ width: 324px; height: 75px; display: block; text-align: center;text-decoration: none; border: 2px solid #49ACD1; border-radius: 5px; color: #4caad2; font: 400 39px/75px 'microsoft yahei'; }
+.yaoinput{ width: 324px; margin: 0 auto; padding: 176px 0 150px 0;}
+.fw30{ padding-top: 30px;}
+.insupp img { width: 1000px;}
+
+
+//é«˜é€Ÿæ‹¥å µ
+#bg1{  width:100%; height:569px;}
+#area1{width:980px; height:569px;  position:relative;}
+#bg1con{  width:100%; height:569px;}
+#area1con{width:1120px; height:569px;  position:relative;}
+#area1con img{ width: 1920px ;margin: 0 auto;}
+#bgCon{background:#FEFDF4 ; clear: both; margin:0 auto; width:100%; height:600px; border-bottom: 1px dashed #E6E6E6;}
+#areaCon2{width:980px; height:600px; margin:0 auto; position:relative;  }
+.conleft{ width: 460px; height: 308px; padding-top: 157px;}
+.conright{ padding-top:157px;    width: 462px;}
+.conright h2{ color: #4caad2;font: 400 36px/40px 'microsoft yahei';   margin-top:0;
+    margin-bottom: 0; }
+.conright p{ color: #b0aca7;font: 400 18px/35px 'microsoft yahei';width:487px; margin:0}
+.fw60{ padding-top: 37px;}
+.fw30{ padding-top: 26px;}
+.footcon{background:#FFFFFF ; clear: both; margin:0 auto; width:100%; height:240px;    margin-bottom: 40px; }
+.footcon1{width:980px; height:240px; margin:0 auto; position:relative; padding-top: 46px;  }
+.footcon1 p{font: 400 16px/30px 'microsoft yahei'; color: #4d4d4d ;}
+
+/**/
+.m-baobiao{ width: 100%; margin: 0 auto; border: 1px dashed #E6E5DC; background: #FEFDF4; height: 550px;}
+.u-biaobiao{ width: 980px; margin: 0 auto; height: 550px; }
+.biaoleft{ width: 360px;padding-top: 183px;}
+.biaoleft h2{color: #4caad2;font: 400 36px/40px 'microsoft yahei';}
+.biaoleft h4{ color: #b0aca7;font: 400 20px/40px 'microsoft yahei'; padding-top: 30px;}
+.biaoleft h4 span{ color: #ff2f00;font: 400 20px/40px 'microsoft yahei';}
+.biaoleft p{ color: #838383;font: 400 14px/25px'microsoft yahei';  }
+.biaoright{ width: 400px;padding-top: 100px; text-align: right;}
+.biaom{ width: 100%; margin: 0 auto; border: 1px dashed #E6E5DC; background: #FEFDF4;clear: both;}
+.biaou{ width: 980px; margin: 0 auto; height: 550px; }
+.biaoright1 h2{color: #4caad2;font: 400 36px/40px 'microsoft yahei';  }
+.biaoright1 h3{color: #4caad2;font: 400 26px/40px 'microsoft yahei';padding-left: 52px;}
+.biaoleft1{ width: 390px; padding-top: 60px; }
+.biaoright1{ width: 296px; padding-top: 154px;}
+.biaoright1 ul li span{ color: #838383;font: 400 14px/25px'microsoft yahei'; padding-left: 15px;  }
+.biaoright1 ul li i{ width: 13px; height: 13px; border-radius: 50%; background: #FF6F3B; float: left;margin-top: 5px;}
+.biaoright1 p{color: #838383;font: 400 14px/25px'microsoft yahei'; text-align: right;}
+.m-baofoot{ width: 100%; margin: 0 auto; color: #fff; background: #006ED2; height: 392px;}
+.u-baofoot{ width: 980px; margin: 0 auto; height: 392px; }
+.foot1{width: 889px; margin: 0 auto; height: 118px; line-height: 118px;}
+.foot1 p{font: 400 35px/118px 'microsoft yahei';  float: left; width: 296px; text-align: center}
+.foot2{width: 889px; margin: 0 auto; padding-top: 40px;}
+.foot2 p{font: 400 26px/40px 'microsoft yahei';  float: left; width: 296px; text-align: center}
+.foot2 p span{font: 400 46px/40px 'microsoft yahei'; color: #3be6ff;}
+.insupulsd li{float: left;width: 276px; margin-right: 40px; }
+.insupulsd li .area5p{font: 400 20px/38px 'microsoft yahei'; color: #3f3f3f;}
+.insupulsd li .area5p1{font: 400 16px/30px 'microsoft yahei'; color: #3f3f3f;}
+.insupulsd{margin-top: -33px;text-align: center; width: 1200px;}
+
+.earnjiashi{ background:url(jiashiImg.png) right no-repeat; width:1176px ; height: 490px; margin: 0 auto;}
+.earnjiashi h1{font: 400 36px/40px 'microsoft yahei'; color: #1e1e1e; text-align: left; padding-top: 100px;}
+.earnjiashi p{font: 400 20px/25px 'microsoft yahei'; color: #666666;text-align: left; }
+.fw20{ padding-top: 15px;}
+

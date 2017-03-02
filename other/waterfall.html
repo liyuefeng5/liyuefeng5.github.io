@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <script>
+        window.onload=function(){
+            var oWaterfall=document.getElementById('waterfall');
+            var oUl=oWaterfall.getElementsByTagName('ul');
+            var n=20;
+            scro()
+            window.onscroll=function(){
+                var oH=document.documentElement.scrollHeight||document.body.offsetHeight;       //整个滚动条高度即页面的高度
+                var oCh=document.documentElement.clientHeight;                                      //页面可视区高度
+                var oS=document.documentElement.scrollTop||document.body.scrollTop;             //页面被卷去的高度
+                if(oS>=oH-oCh-50){
+                    scro()
+                }
+            }
+
+            function scro(){
+                for(var i=0; i<n; i++){
+                    var ali=document.createElement('li');
+                    ali.style.height=rnd(100,500)+'px';
+                    ali.style.background='rgb('+rnd(0,255)+','+rnd(0,255)+','+rnd(0,255)+')';
+                    var h1=oUl[0].offsetHeight;
+                    var h2=oUl[1].offsetHeight;
+                    var h3=oUl[2].offsetHeight;
+                    var minH=null;
+                    if(h1>h2){
+                        if(h2>h3){
+                            minH=oUl[2];
+                        }else{
+                            minH=oUl[1];
+                        }
+                    }else{
+                        if(h1>h3){
+                            minH=oUl[2];
+                        }else{
+                            minH=oUl[0];
+                        }
+                    }
+                    minH.appendChild(ali);
+                }
+            }
+        }
+        function rnd(n,m){
+            return parseInt(Math.random()*(m-n)+n);
+        }
+    </script>
+</head>
+<body>
+<div id="waterfall">
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+</div>
+</body>
+</html>

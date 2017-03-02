@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            list-style: none;
+        }
+        #box{
+            width: 16rem;
+            height:10rem;
+            overflow: hidden;
+        }
+        #box ul{
+            width:96rem;
+            overflow: hidden;
+        }
+        #box li{
+            width:16rem;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            line-height: 10rem;
+            height:10rem;
+            float: left;
+            -webkit-transform: translate3d(0,0,0);
+        }
+    </style>
+    <script>
+        ;(function(){
+            var html=document.documentElement;
+            html.style.fontSize=20*html.clientWidth/320+'px';
+            window.onresize=function(){
+                html.style.fontSize=20*html.clientWidth/320+'px';
+            };
+        })()
+
+        document.addEventListener('touchstart',function(ev){
+            ev.preventDefault();
+        },false);
+
+        document.addEventListener('DOMContentLoaded',function(){
+            var oUl=document.querySelector('#box ul');
+            var aLi=oUl.children;
+
+            var iNow=1; //当前第几张显示
+            var tx=-iNow*aLi[0].offsetWidth;
+
+            oUl.style.WebkitTransform='translate3d('+tx+'px,0,0)';
+
+            var bReady=true;
+
+            oUl.addEventListener('touchstart',function(ev){
+                if(!bReady)return;
+                bReady=false;
+                var downX=ev.targetTouches[0].pageX;
+                var disX=downX-tx;
+
+                oUl.style.WebkitTransition='none';
+
+                function fnMove(ev){
+                    tx=ev.targetTouches[0].pageX-disX;
+
+                    oUl.style.WebkitTransform='translate3d('+tx+'px,0,0)';
+
+                    ev.preventDefault();
+                }
+                function fnEnd(ev){
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+
+                    var upX=ev.changedTouches[0].pageX;
+                    if(Math.abs(downX-upX)>50){
+                        //切换
+                        if(downX>upX){ //往左， ++
+                            iNow++;
+                        }else{ //--
+                            iNow--;
+                        }
+                    }
+                    tx=-iNow*aLi[0].offsetWidth;
+                    oUl.style.WebkitTransition='.4s all ease';
+                    oUl.style.WebkitTransform='translate3d('+tx+'px,0,0)';
+
+                    //判断ul运动结束
+                    function tEnd(){
+                        bReady=true;
+                        oUl.removeEventListener('transitionend',tEnd,false);
+
+                        if(iNow==aLi.length-1){
+                            iNow=1;
+                            tx=-iNow*aLi[0].offsetWidth;
+                            oUl.style.WebkitTransition='none';
+                            oUl.style.WebkitTransform='translate3d('+tx+'px,0,0)';
+                        }
+                        if(iNow==0){
+                            iNow=aLi.length-2;
+                            tx=-iNow*aLi[0].offsetWidth;
+                            oUl.style.WebkitTransition='none';
+                            oUl.style.WebkitTransform='translate3d('+tx+'px,0,0)';
+                        }
+                    }
+                    oUl.addEventListener('transitionend',tEnd,false);
+                }
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+            },false);
+        },false);
+    </script>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li style="background:#757eff">3</li>
+
+        <li style="background:salmon">0</li>
+        <li style="background:#399">1</li>
+        <li style="background:#ffc240">2</li>
+        <li style="background:#757eff">3</li>
+
+        <li style="background:salmon">0</li>
+    </ul>
+</div>
+</body>
+</html>

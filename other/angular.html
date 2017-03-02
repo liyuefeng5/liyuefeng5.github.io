@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/angular.css"/>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular.js"></script>
+    <script src="../js/angular-route.js"></script>
+</head>
+<body>
+<div id="box">
+<!--购物车-->
+    <div id="shoppingCart" ng-controller="shopping">
+        <p class="jieshao">模拟简单购物车算法</p>
+        <ul>
+            <li ng-repeat="item in arr">
+                <p>名称:{{item.name}}</p>
+                <p>单价:{{item.price}}</p>
+                <p>数量<input type="number" ng-model="item.count" min="0"/></p>
+                <p style="color: #fc653f;">总价{{item.count*item.price|currency:'￥'}}</p>
+            </li>
+            <p><b style="font-size: 16px;color: #fc653f;">总计:{{num()|currency:'￥'}}</b></p>
+        </ul>
+    </div>
+<!--留言板-->
+    <div id="Message" ng-controller="Message">
+        <p class="jieshao">模拟留言板添加删除数据</p>
+        <input type="text" ng-model="msg" placeholder="请输入留言"/>
+        <input type="submit" value="提交" ng-click="fnSend()"/>
+        <p ng-hide="arr.length" style="padding:3px; color:#fc653f">暂无留言</p>
+        <ul>
+            <li style="line-height: 20px;" ng-repeat="item in arr">{{item}}<a style="padding-left:3px;color:#fc653f" href="javascript:;" ng-click="fnDel($index)">删除</a></li>
+        </ul>
+    </div>
+<!--百度搜索-->
+    <div id="baidu" ng-controller="baidu">
+        <img width="270" height="129" src="../img/bd_logo1_31bdc765.png" alt=""/><br/>
+        <input type="text" ng-model="msg" ng-keyup="fnSou()"/>
+        <input type="submit"/>
+        <ul class="list">
+            <li ng-repeat="item in arr">{{item}}</li>
+        </ul>
+    </div>
+    <!--路由跳转-->
+   <!-- <div id="luyou">
+        <ul>
+            <li><a href="#/index">首页</a></li>
+            <li><a href="#/about">关于我们</a></li>
+        </ul>
+        <div ng-view></div>
+    </div>-->
+</div>
+</body>
+</html>

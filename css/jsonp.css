@@ -1,0 +1,37 @@
+#box{width:1000px; margin:auto;}
+/*°Ù¶È*/
+#baidu{ text-align: center;}
+#baidu input[type=text]{
+    width: 480px!important;
+    padding-right: 48px!important;
+    padding: 9px 7px;
+    font: 16px arial;
+    border: 1px solid #b8b8b8;
+    border-bottom: 1px solid #ccc;
+    border-right: 0;
+    vertical-align: top;
+    outline: none;
+    box-shadow: none;
+}
+#baidu input[type=submit]{    cursor: pointer;    margin-left: -5px;
+    width: 102px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0;
+    border: 0;
+    background: none;
+    background-color: #38f;
+    font-size: 16px;
+    color: white;
+    box-shadow: none;
+    font-weight: normal;
+}
+#baidu .list{
+    width: 630px;
+    margin: auto;
+    padding-left: 5px;
+    text-align: left;
+}
+#baidu .list li{
+    height: 20px; line-height:20px;
+}

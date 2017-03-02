@@ -1,0 +1,76 @@
+@charset "utf-8";
+/*菜单*/
+.navBox{height:80px; background:#3a556f; position:fixed; left:0;right:0;top:0; z-index:3;transition: all 1s;}
+.navTrans{background-color:transparent; }
+.navBox .logo{ float:left; margin-top:16px; margin-left:40px;}
+.navBox .sliderbar{ float:right; margin-right:37px;}
+.navBox .sliderbar > li {float:left ;position:relative;border-top:8px solid transparent ;color:#00DFB8;outline: none}
+.navBox .sliderbar > li.active{ border-top:8px solid #00DFB8;}
+.navBox .sliderbar > li.active a{color:#00DFB8;}
+.navBox .sliderbar > li.select{ border-top:8px solid #00DFB8;}
+.navBox .sliderbar > li.select a{ color: #00DFB8;} 
+.navBox .sliderbar > li >a{color:#FFFFFF; padding:27px 23px 24px; float:left;}
+.navBox .sliderbar > li .sliderbarsub {position:absolute; top:72px;left:0; width:100%; height:0px; overflow:hidden;}
+.navBox .sliderbar > li .sliderbarsub li a{color:#ffffff; background:rgba(113,113,113,0.5);*background: #717171; *filter: alpha(opacity=0.5);*opacity: 0.5; cursor:pointer; line-height:40px;text-align:center; margin-top:2px; display:block;  } 
+.navBox .sliderbar > li .sliderbarsub li a:hover{color:#ffffff; background:rgba(113,113,113,1);*background: #717171; *filter: alpha(opacity=1);*opacity: 1;} 
+.navBox .sliderbar > li .sliderbarsub li a.active{color:#ffffff; background:rgba(113,113,113,1);*background: #717171; *filter: alpha(opacity=1);*opacity: 1;} 
+/*内容字体*/
+/*wrapper*/
+.wrapper{min-width:1100px; overflow:hidden;}
+.contentBox{ width:1200px; margin:auto; padding-top:80px;}
+/*底部样式*/
+.footerBox{ background:#333333; text-align:center;margin:auto; text-align:center; height:260px }
+.footerBox .content{ text-align:left; width:1200px; margin:auto; text-align:left; padding-top:40px;}
+.footerBox .content .footerleft{ width:330px; float:left; margin-left:136px;}
+.footerBox .content .footerleft .info{ margin-top:17px;}
+.footerBox .content .footerleft .info span{ float:left;}
+.footerBox .content .footeright{float:left; margin-left:256px;}
+.footerBox .content .footeright .info{ margin-top:20px; height:112px;}
+.footerBox .content .footeright .info li{ margin-top:14px;}
+.footerBox .content .footerbtm{ padding-top:20px; clear:both; text-align:center }
+/*底部字体*/
+.fonthead{ color:#ffffff; font-size:18px; font-family: "YaHeiBD";}
+.font01{font-size:16px; color:#B5B5B5; font-weight:bold;}
+.font02{font-size:14px; color:#B5B5B5;}
+.font03{font-size:12px; color:#B5B5B5;}
+/*text*/
+.text_left{ text-align:left;}
+.text_center{ text-align:center;}
+.text_right{ text-align:right; }
+/*float*/
+.float_left{ float:left;}
+.float_right{ float:right;}
+/* icon 样式*/
+.ico{ background:url(../images/ico.png) no-repeat;}
+/*回到顶部*/
+.gotop{ position: fixed; bottom: 40px; right: 40px; z-index: 9999;}
+.ico_top{ width:60px; height:60px; background-position:-236px -10px; display:block;}
+.ico_bottom{ width:41px; height:40px; background-position:-307px -10px; display:block; margin:auto;
+position:absolute; bottom:53px; left:50%; margin-left:-20px; z-index:9999;}
+.ico_logo{ width:185px; height:60px; background-position:-9px -10px; display:block;}
+.ico_banner01{ width:400px; height:130px; background-position:-252px -158px; display:block; margin-top: 30px;}
+.ico_square{width:11px; height:11px; background-position:-203px -10px; display:inline-block; margin-right: 10px;}
+.ico_line01{ height:143px; width:40px;     background-position: -846px -10px; position:absolute; right:-10px; top:-10px; }
+.ico_line02{height:150px; width:50px; background-position:-640px -10px; position:absolute; left:-10px; top:0px; }
+.ico_line03{height:205px; width:103px;background-position:-708px -26px; position:absolute; right:-10px; top:-10px; }
+/*下载按钮*/
+.btn{cursor:pointer;border-radius:30px;-webkit-border-radius:30px;-moz-border-radius:30px;text-align:center;line-height:44px; font-size:19px;width:178px; height:46px;color:#00dfb8;border:2px solid #00dfb8; display:block ; background-color:transparent;  position:relative;    margin: auto;
+transition: all 1s;}
+.btn_android{ margin:0 auto; margin-top:36px;padding-left:40px;}
+.btn_app{ margin:0 auto ;margin-top:14px;padding-left:40px;}
+.btn.active{background:#00dfb8; color:#ffffff}
+.ico_android{ width:24px; height:30px; background-position:-363px -10px;  display:inline-block; position:absolute ; left:23px; top:6px;}
+.active .ico_android{background-position:-428px -10px;}
+.ico_app{width:24px; height:30px; background-position:-458px -52px;display:inline-block; position:absolute ; left:23px; top:10px;}
+.active  .ico_app{background-position:-507px -72px;}
+/*底部*/
+.ico_footer01{ width:216px; height:52px; background-position:-9px -147px; display:block;margin-right:4px; margin-bottom:4px;}
+.ico_footer02{ width:106px; height:52px; background-position:-375px -84px; display:block;margin-right:4px; margin-bottom:4px;}
+.ico_footer03{ width:216px; height:52px; background-position:-9px -84px; display:block; margin-right:4px; margin-bottom:4px;}
+.ico_footer04{ width:106px; height:51px; background-position:-247px -84px; display:block;margin-right:4px; margin-bottom:4px;}
+/*清楚浮动*/
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height:0;height:0;font-size:0;}
+.clearfix { *zoom:1;}  
+
+
+

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        div{ width: 200px; height: 200px; background: red; position: absolute;
+            top: 50%; margin-top: -100px; left: 50%; margin-left: -100px;
+        }
+    </style>
+    <script>
+        document.addEventListener('touchstart',function(ev){
+            ev.preventDefault();
+        },false);
+        document.addEventListener('DOMContentLoaded',function(){
+            var oBox=document.querySelector('div');
+            var dir=''
+            var tx=0;
+            var ty=0;
+            oBox.addEventListener('touchstart',function(ev){
+                    var downX=ev.targetTouches[0].pageX;
+                    var downY=ev.targetTouches[0].pageY;
+
+                    var disX=downX-tx;
+                    var disY=downY-ty;
+
+                    document.addEventListener('touchmove',fnMove,false);
+                    document.addEventListener('touchend',fnEnd,false);
+                    function fnMove(ev){
+
+                        if(dir){
+                            if(dir=='lr'){
+                                tx=ev.targetTouches[0].pageX-disX;
+                                oBox.style.WebkitTransform='translate('+tx+'px,'+ty+'px)';
+                            }
+                            if(dir=='ud'){
+                                ty=ev.targetTouches[0].pageY-disY;
+                                oBox.style.WebkitTransform='translate('+tx+'px,'+ty+'px)';
+                            }
+
+                        }else{
+                            //判断方向
+                            if(Math.abs(downX-ev.targetTouches[0].pageX)>20){
+                                dir='lr';
+                            }else if(Math.abs(downY-ev.targetTouches[0].pageY)>20){
+                                dir='ud';
+                            }
+                         }
+                        ev.preventDefault();
+                    };
+                    function fnEnd(){
+                        document.removeEventListener('touchmove',fnMove,false);
+                        document.removeEventListener('touchend',fnEnd,false);
+                        dir='';
+                    }
+            },false);
+        },false)
+    </script>
+</head>
+<body>
+<div></div>
+</body>
+</html>

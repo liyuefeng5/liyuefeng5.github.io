@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <script>
+        window.onload=function(){
+            var oFangdajing=document.getElementById('fangdajing');
+
+            (function(){
+                var oFangdajing2=document.getElementById('fangdajing2');
+                var oSm=oFangdajing2.getElementsByTagName('div')[0];
+                var oSm_img=oSm.getElementsByTagName('img')[0];
+                var oBg=oFangdajing2.getElementsByTagName('div')[1];
+                var oBg_img=oBg.getElementsByTagName('img')[0];
+
+                oSm.onmouseover=function(){
+                  oBg.style.display='block';
+                    oSm.setCapture&&oSm.setCapture();
+                };
+
+                window.onmousemove=function(ev){
+                    var ev=ev||event;
+                    var l=ev.clientX-oFangdajing2.offsetLeft;
+                    var t=ev.clientY;
+                    console.log(ev.clientY)
+                    oBg.style.left=l+'px';
+                    oBg.style.top=t+'px';
+                    
+                    var Bg_l=(oBg.offsetWidth-oBg_img.offsetWidth)*(l-oSm.offsetLeft-oBg.offsetWidth/2)/(oSm.offsetWidth/oBg.offsetWidth);
+                    var Bg_t=(oBg.offsetHeight-oBg_img.offsetHeight)*(l-oSm.offsetTop-oBg.offsetHeight/2)/(oSm.offsetHeight/oBg.offsetHeight)
+
+                   // oBg_img.style.marginLeft=Bg_l+'px';
+                    //oBg_img.style.marginTop=Bg_t+'px';
+                }
+                oSm.onmouseout=function(){
+                   oBg.style.display='none';
+                    oSm.releaseCapture&&oSm.releaseCapture();
+               }
+            })();
+
+        }
+    </script>
+</head>
+<body>
+<div id="fangdajing">
+
+    <!--放大镜2-->
+    <div id="fangdajing2">
+        <div class="sm">
+            <img src="../img/b1.jpg" alt=""/>
+        </div>
+        <div class="bg">
+            <img src="../img/b1.jpg" alt=""/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/register.js"></script>
+</head>
+
+<body>
+<div id="register">
+     <h2>会员注册</h2>
+     <div>用 户 名：<input style="margin-left: 20px;" type="text" class="text user_hint" />
+                  <span class="user user_info">请输入用户名：2-20位，由字母·数字和下划线组成！</span>
+                  <span class="user user_error">输入不合法，请重新输入</span>
+                  <span class="user user_succ">可用</span>
+     </div>
+     <div>密 码：<input style="margin-left: 38px;" type="password" id="pass" class="text pass_hint" />
+                  <span class="pass pass_info">
+                        <p>安全级别：
+                              <strong class="s s1">■</strong>
+                              <strong class="s s2">■</strong>
+                              <strong class="s s3">■</strong>
+                              <strong class="s s4"></strong>
+                        </p>
+                        <p><strong class="q1">○</strong>6-20个字符</p>
+                        <p><strong class="q2">○</strong>只能包含大小写字母·数字·和非空格字符</p>
+                        <p><strong class="q3">○</strong>大·小写字母·数字·非空字符，2种以上</p>
+                  </span>
+                  <span class="pass pass_error">输入不合法，请重新输入</span>
+                  <span class="pass pass_succ">可用</span>
+                  <img id="eye" src="../img/yanjing.png"/>
+     </div>
+     <div>确 认 密 码：<input style="margin-left: 2px;" type="password" id="pass1" class="text pass_again" />
+                   <span class="againpass againpass_info">请在一次输入密码</span>
+                   <span class="againpass againpass_error">密码不一致，请重新输入</span>
+                   <span class="againpass againpass_succ">可用</span>
+                   <img id="eye1" src="../img/yanjing.png"/>
+     </div>
+     <div>提 问：
+            <select style="margin-left: 34px;width:200px;">
+                 <option>---请选择---</option>
+                 <option>---您最喜欢吃的菜</option>
+                 <option>---您的狗狗的名字</option>
+                 <option>---您的出生地</option>
+                 <option>---您最喜欢的明星</option>
+            </select>
+     </div>   
+     <div>回 答：<input style="margin-left: 38px;" type="text" class="text answer" />
+               <span class="ans ans_info">请输入回答，2-32位</span>
+               <span class="ans ans_error">回答不合法，请重新输入</span>
+               <span class="ans ans_succ">可用</span>
+     </div>
+     <div>电 子 邮 件：<input style="margin-left: 1px;" type="email" class="text e_mail" autocomplete="off" />
+               <span class="e_m e_m_info">请输入电子邮件</span>
+               <span class="e_m e_m_error">邮件不合法，请重新输入</span>
+               <span class="e_m e_m_succ">可用</span>
+               <ul class="all_email">
+                    <li><span></span>@qq.com</li>
+                     <li><span></span>@163.com</li>
+                      <li><span></span>@sohu.com</li>
+                       <li><span></span>@sina.com</li>
+                        <li><span></span>@gmail.com</li>
+               </ul>
+     </div>
+     <div>生 日：
+           <select style="margin-left: 34px;">
+                 <option>-年-</option>
+           </select>-
+           <select>
+                 <option>-月-</option>
+           </select>-
+           <select>
+                 <option>-日-</option>
+           </select>
+     </div>
+     <div>备 注：<textarea style="margin-left: 38px;" id="textBig"></textarea> </div>
+     <div style="margin-left:174px;margin-top:20px">还可以输入<span id="strLength">200</span>个字</div>
+     <button>注  册</button>
+     <script type="text/javascript">
+      window.onload=function(){
+		  var t=document.getElementById("textBig");
+		  var str=document.getElementById("strLength");
+		  t.onkeydown=function (){
+			  str.innerHTML=200-(t.value.length);
+			  }
+		  }
+     </script>
+</div>
+</body>
+</html>

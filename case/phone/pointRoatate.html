@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        #pointRotate{ width: 200px; height: 200px; background: red; position: absolute;
+            top: 50%; margin-top: -100px; left: 50%; margin-left: -100px;}
+    </style>
+    <script>
+
+        document.addEventListener('touchstart',function(ev){
+            ev.preventDefault();
+        });
+        document.addEventListener('DOMContentLoaded',function(){
+            var oBox=document.querySelector('div');
+            var d=0;
+            var olD=0;
+            var oWd=0;
+            oBox.addEventListener('touchstart',function(ev){
+                oWd=d;
+                function getD(ev){
+                    var x1=ev.targetTouches[0].pageX;
+                    var y1=ev.targetTouches[0].pageY;
+
+                    var x2=oBox.offsetLeft+oBox.offsetWidth/2;
+                    var y2=oBox.offsetTop+oBox.offsetHeight/2;
+
+                    var x=x1-x2;
+                    var y=y2-y1;
+
+                    var d=Math.atan2(y,x)*180/Math.PI;
+
+                    return d;
+                }
+                olD=getD(ev);
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+                function fnEnd(){
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+                }
+                function fnMove(ev){
+                    d=oWd+olD-getD(ev)
+                    oBox.style.WebkitTransform='rotate('+d+'deg)';
+                    ev.preventDefault();
+                }
+            },false);
+        },false)
+    </script>
+</head>
+<body>
+    <!--单点旋转-->
+    <div id="pointRotate"></div>
+</body>
+</html>

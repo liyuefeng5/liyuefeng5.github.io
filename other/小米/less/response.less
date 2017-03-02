@@ -1,0 +1,154 @@
+@import "varr";
+.timeline>li{
+  .clearf();
+}
+.container{
+  &{
+    width: 100%;
+    height: auto;margin: 0 auto;
+  }
+  &>.row{
+    width: 100%;
+    .clearf();
+  }
+  &-fluid{
+    width: 100%;
+    height: auto;
+  }
+  &-fluid>.row{
+    width: 100%;
+    .clearf();
+  }
+
+}
+
+.offset(m);
+.offset(l);
+.response;
+
+.col-l-hide{
+  display: block;
+}
+.col-m-hide{
+  display: block;
+}
+.col-s-hide{
+  display: none;
+}
+.zfoot{
+  display: none;
+}
+.foo{
+  .clearf
+}
+@media screen and (min-width: @num1){
+  .container{
+    width: @num1;
+  }
+  .offset(s);
+  .offset(l);
+  .response(m);
+  .col-l-hide{
+    display: block;
+  }
+  .col-s-hide{
+    display: block;
+  }
+  .col-m-hide{
+    display: none;
+  }
+  .zfoot{
+    display: none;
+  }
+}
+@media screen and (min-width: @num2){
+  .container{
+    width: @num2;
+  }
+  .response(l);
+  .col-m-hide{
+    display: block;
+  }
+  .col-s-hide{
+    display: block;
+  }
+  .col-l-hide{
+    display: none;
+  }
+  .zfoot{
+    display: none;
+  }
+  .banquan{
+    display: block;text-align: center;
+  }
+}
+@media screen and (min-width: @num3){
+  .banquan{
+    display: none;
+  }
+  .zfoot{
+    display: block;
+  }
+  .container{
+    width: @num3;
+  }
+  .response1(sl);
+  .col-m-hide{
+    display: block;
+  }
+  .col-s-hide{
+    display: block;
+  }
+  .col-l-hide{
+    display: block;
+  }
+}
+
+
+
+.response(@type:s,@i:1) when(@i<=@cols){
+  .container>.row>.col-@{type}-@{i}{
+  float: left;width: (@i/@cols)*95%;
+    position: relative;
+}
+  .container-fluid>.row>.col-@{type}-@{i}{
+    float: left;width: (@i/@cols)*95%;
+    position: relative;
+  }
+  .col-@{type}-offsetl-@{i}{
+    left: -@i/@cols*95%;
+  }
+  .col-@{type}-offsetr-@{i}{
+    left: @i/@cols*95%;
+  }
+  .response(@type,@i+1)
+
+}
+.response1(@type:s,@i:1) when(@i<=15){
+  .container>.row>.col-@{type}-@{i}{
+    float: left;width: (@i/15)*95%;
+    position: relative;
+  }
+
+  .response1(@type,@i+1)
+
+}
+
+.clearf(){
+    &:before,&:after{
+      content:"";
+      clear: both;
+    }
+    &:after{
+      display: block;
+    }
+}
+.offset(@type:s,@i:1) when(@i<=@cols){
+   .col-@{type}-offsetl-@{i}{
+  left: 0;
+}
+  .col-@{type}-offsetr-@{i}{
+  left: 0;
+}
+  .offset(@type,@i+1)
+}

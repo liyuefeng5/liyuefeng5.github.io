@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        div{ width: 200px; height: 200px; background: red; position: absolute;
+            top: 50%; margin-top: -100px; left: 50%; margin-left: -100px;
+            -webkit-transition: .4s all ease;
+        }
+    </style>
+    <script>
+        document.addEventListener('touchstart',function(ev){
+            ev.preventDefault();
+        },false)
+        document.addEventListener('DOMContentLoaded',function(){
+
+            oBox=document.querySelector('div');
+            b_left(oBox,function(){
+                alert('左边')
+            })
+        },false)
+        function b_left(obj,fn){
+            var bLeft=true;
+            obj.addEventListener('touchstart',function(ev){
+
+                var downX=ev.targetTouches[0].pageX;
+
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+
+                function fnEnd(){
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+                    if(bLeft){
+                        fn&&fn.call(obj)
+                    }
+                }
+
+                function fnMove(ev){
+                    var new_X=ev.targetTouches[0].pageX;
+                    if(downX-new_X>50){
+                        //左
+                        bLeft=true;
+                    }else{
+                        bLeft=false;
+                    }
+                    ev.preventDefault()
+                }
+            },false)
+        }
+    </script>
+</head>
+<body>
+<div></div>
+</body>
+</html>

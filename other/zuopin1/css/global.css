@@ -1,0 +1,118 @@
+@charset "utf-8";
+/*******************************************************首页****************************************************/
+.warp{margin-top:76px;}
+/**导航模块*/
+.box-nav { position:fixed;top:0;left:0; right:0; background-color:#FFF; z-index:1000;}
+.box-nav .logo-box{ padding:16px 0;}
+.box-nav .logo-box .logo{ height:44px; width:200px; background:url(../img/logo.png) center  no-repeat; background-size:contain; }
+.box-nav ul{ float:right;}
+.box-nav ul li{ float:left; padding:18px 50px;}
+.box-nav ul li a{ height:40px; width:120px; line-height:40px; font-size:16px; text-align:center; color:#6b818b; border-radius:25px;-webkit-border-radius:25px; -moz-border-radius:25px;}
+.box-nav ul li a.active{ color:#76cfed;border:1px solid #76cfed;}
+.box-nav ul li a.hover{ color:#76cfed;border:1px solid #76cfed;}
+/**banner模块 */
+.box-banner{ background-color:#000000; padding:50px; background-attachment:fixed;}
+.box-banner .box-banner-img{height:600px;}
+/**tab模块 */
+.box-tab{ height:400px;}
+.box-tab .sub-1{ background-color:#28b4e3;}
+.box-tab .sub-2{ background-color:#fe497c;}
+.box-tab .sub-3{ background-color:#5966b3;}
+.box-tab .sub-1,.box-tab .sub-2,.box-tab .sub-3{padding:70px 0;width:33.333333%; float:left; position:relative; height:100%;}
+.box-tab  dl{text-align:center;}
+.box-tab  dl dt img{ margin:30px  auto; height:150px}
+.box-tab  dl dd{text-align:center; line-height:50px; font-size:24px; color:#e5fbf3; }
+.box-tab  .mc{ width:100%; height:100%; position:absolute; top:0; left:0; right:0;  text-align:center; display:none;}
+.box-tab  .mc .mg_bg{width:100%; height:100%; background:#000000; position:absolute; top:0; left:0; right:0;filter:alpha(opacity=50);opacity:.5} 
+ .box-tab .mc  img{ height:160px; margin:auto; position:relative; top:120px; z-index:100}
+/* 动态 */
+.box-state{background-color:#f6f7f8; padding:70px 0;}
+.hand-title{ font-size:24px; line-height:50px;}
+.box-state ul li{ width:400px; float:left; padding:25px 0; }
+.box-state ul li  img{ width:90px; float:left;}
+.box-state ul li .state-tab { padding-left:100px;}
+.box-state ul li .state-tab .title{ font-size:16px; line-height:30px;}
+.box-state ul li .state-tab .info{font-size:14px; line-height:25px;}
+.box-state ul li .state-tab .data{font-size:12px; line-height:20px; margin-top:15px;}
+/* 媒体 */
+.box-media{ background-color:#edeff1; padding-top:40px; padding-bottom:60px; }
+.box-media ul li{ width:400px; float:left; position:relative; }
+.box-media ul li  img{ width:90px; position:absolute; top:20px; right:50px;}
+.box-media ul li .media-tab { width:260px;}
+.box-media ul li .media-tab .title{ font-size:15px; line-height:50px;}
+.box-media ul li .media-tab .info{font-size:12px; line-height:20px; width:230px;}
+/* 底部 */
+.box-footer{background-color:#33434a;text-align:center; padding-top:40px; padding-bottom:60px;}
+.box-footer .f-logo{ width:77px;}
+.box-footer .ico-weibo,.ico-weixin,.ico-baidu{ height: 40px; width:40px; display:inline-block;margin:25px 15px;}
+.box-footer .ico-weibo{ background:url(../img/icon/f-sina.png) no-repeat center;}
+.box-footer .ico-weixin{ background:url(../img/icon/f-weixin.png) no-repeat center;}
+.box-footer .ico-baidu{ background:url(../img/icon/f-baidu.png) no-repeat center;}
+.box-footer .complice{color:#455c65; line-height:30px; }
+/***********************************************频安盒子页面*********************************************/
+.box-hand{ background:url(../img/banner-box-bg.png) bottom no-repeat;height:650px; border-top:1px solid #eeeeee;}
+.box-hand  .container{position:relative; margin-top:100px; margin-bottom:100px; height:500px; }
+.banner-box-l{ position:absolute; top:50px; left:0; height:500px;}
+.banner-box-r{  position:absolute;top:50px; right:250px;  text-align:center;}
+.banner-box-r .title,.box-hand dl .title span{font-size:45px; color:#28b4e3;}
+.banner-box-r .box-btn{ height:50px; width:180px; background-color:#28b4e3; color:#FFF; font-size:24px; margin-top:70px; line-height:50px; text-align:center;
+ border-radius:5px;-webkit-border-radius:5px; -moz-border-radius:5px;}
+/*******/
+.box-one{ padding:90px 0; }
+.box-title{text-align:center; font-size:24px; line-height:50px;}
+.box-content{ position:relative;text-align:center; margin-top:20px;}
+.box-content .box-left{ position:absolute; left:130px; top:50px;}
+.box-content .box-right{ position:absolute; right:130px;top:50px;}
+.box-content .img-box{ margin:auto;}
+.box-content .box-referral{ text-align:left;}
+.box-content .box-referral li{ margin-top:30px;}
+.box-content .box-referral h4{ line-height:50px; font-size:20px; font-weight:100;}
+.box-content .box-referral p{line-height:30px; font-size:14px;}
+/********/
+.box-two{ background:#f0f3f5; padding:50px 0;}
+.box-num,.box-jiantou{ float:left; text-align:center; padding:20px 0;}
+.box-num{ width:300px;margin:auto;}
+.box-num p{font-size:18px;color:#34b03e; margin-top:20px;}
+.box-jiantou{ width:150px;margin:auto;}
+.box-jiantou img{ margin-top:20px;}
+/********/
+.box-three{ padding:60px 0;}
+.box-three-hand{ padding:20px 10px; }
+.box-three-hand .letter li{ float:left; color:#007ac1; }
+.box-three-hand .letter li a{  color:#007ac1; width:30px; height:30px; text-align:center; line-height:30px; }
+.box-three-hand .letter li a.active{  color:#fff;background:#007ac1;border-radius:15px;-webkit-border-radius:15px; -moz-border-radius:15px;}
+.box-three-hand .tab{ float:right;}
+.box-three-hand .tab li{ float:left; margin-left:10px;}
+.box-three-hand .tab span{ width:10px; height:10px; margin-right:5px;}
+.box-three-hand .tab span.style1{ background:#ff3300;}
+.box-three-hand .tab span.style2{ background:#656d78;}
+.box-three-body{ margin-top:30px;}
+/***********************************************下载APP页面*********************************************/
+.banner-down{ background:url(../img/banner-down.png) repeat bottom; height:750px;}
+.banner-down .banner-down-l{ position:absolute; top:100px; left:150px; height:500px;}
+.banner-down .banner-down-r{ position:absolute;top:140px; right:250px;  text-align:center;}
+.banner-down .banner-down-r  .title{ font-size:45px; text-align:center; color:#FFFFFF; line-height:120px;}
+.banner-down .banner-down-r  .ewm{ width:160px;}
+.banner-down .banner-down-r  .ios-btn{ width:167px; height:50px; background:url(../img/icon/btn-ios.png) center no-repeat; margin-top:40px;}
+.banner-down .banner-down-r  .android-btn{ width:167px; height:50px; background:url(../img/icon/btn-android.png) center no-repeat;margin-top:40px; margin-left:20px;}
+/***/
+.box-down  li { margin:100px 0;}
+.box-down .img-left   .icon-img{ float:left; width:320px; height:320px;}
+.box-down .img-left   .box-down-info{padding-left:480px; padding-top:90px;}
+.box-down .img-left  .box-down-info h4{font-size:32px; font-weight:100;color:#546e7a; line-height:50px;}
+.box-down .img-left  .box-down-info p{ font-size:22px; margin-top:10px; line-height:35px;color:#546e7a}
+/****/
+.box-down .img-right  .icon-img{ float:right;width:320px; height:320px;}
+.box-down .img-right  .box-down-info{padding-right:480px; padding-top:100px;}
+.box-down .img-right  .box-down-info h4{font-size:32px; font-weight:90;color:#546e7a; line-height:50px; text-align:right;}
+.box-down .img-right  .box-down-info p{ font-size:22px; margin-top:10px; line-height:30px;color:#546e7a; text-align:right;}
+/***********************************************关于我们页面*********************************************/
+/*地图部分*/
+.map{ height:670px; width:100%;}
+/*联系信息*/
+.us_info dl{ float:left; color:#304f5f; width:400px; text-align:center; margin-bottom:80px; margin-top:40px;}
+.us_info dl dt img{ margin:35px 0; width:70px; height:70px;}
+.us_info dl dd{ font-size:20px; line-height:30px;}
+
+
+

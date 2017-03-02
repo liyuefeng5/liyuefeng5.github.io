@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        .gray{
+            background: #ccc;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-1.7.2.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/vue-resource.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'body',
+                data:{
+                    //liuyan
+                    myData:[],
+                    username:'',
+                    age:'',
+                    nowIndex:-100,
+                    //baidu
+                    myDataB:[],
+                    t1:'',
+                    now:-1
+                },
+                methods:{
+                    //liuyan
+                    add:function(){
+                        this.myData.push({
+                            name:this.username,
+                            age:this.age
+                        });
+
+                        this.username='';
+                        this.age='';
+                    },
+                    deleteMsg:function(n){
+                        if(n==-2){
+                            this.myData=[];
+                        }else{
+                            this.myData.splice(n,1);
+                        }
+                    },
+                    //baidu
+                    get:function(ev){
+                        if(ev.keyCode==38 || ev.keyCode==40)return;
+
+                        if(ev.keyCode==13){
+                            window.open('https://www.baidu.com/s?wd='+this.t1);
+                            this.t1='';
+                        }
+
+                        this.$http.jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',{
+                            wd:this.t1
+                        },{
+                            jsonp:'cb'
+                        }).then(function(res){
+                            this.myDataB=res.data.s;
+                        },function(){
+
+                        });
+                    },
+                    changeDown:function(){
+                        this.now++;
+                        if(this.now==this.myDataB.length)this.now=-1;
+                        this.t1=this.myDataB[this.now];
+                    },
+                    changeUp:function(){
+                        this.now--;
+                        if(this.now==-2)this.now=this.myDataB.length-1;
+                        this.t1=this.myDataB[this.now];
+                    }
+                }
+            })
+        };
+    </script>
+</head>
+<body>
+<!--liuyan-->
+<div class="container" id="box">
+    <form role="form">
+        <div class="form-group">
+            <label for="username">用户名:</label>
+            <input type="text" id="username" class="form-control" placeholder="输入用户名" v-model="username">
+        </div>
+        <div class="form-group">
+            <label for="age">年　龄:</label>
+            <input type="text" id="age" class="form-control" placeholder="输入年龄" v-model="age">
+        </div>
+        <div class="form-group">
+            <input type="button" value="添加" class="btn btn-primary" v-on:click="add()">
+            <input type="reset" value="重置" class="btn btn-danger">
+        </div>
+    </form>
+    <hr>
+    <table class="table table-bordered table-hover">
+        <caption class="h3 text-info">用户信息表</caption>
+        <tr class="text-danger">
+            <th class="text-center">序号</th>
+            <th class="text-center">名字</th>
+            <th class="text-center">年龄</th>
+            <th class="text-center">操作</th>
+        </tr>
+        <tr class="text-center" v-for="item in myData">
+            <td>{{$index+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>
+                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" v-on:click="nowIndex=$index">删除</button>
+            </td>
+        </tr>
+        <tr v-show="myData.length!=0">
+            <td colspan="4" class="text-right">
+                <button class="btn btn-danger btn-sm" v-on:click="nowIndex=-2" data-toggle="modal" data-target="#layer" >删除全部</button>
+            </td>
+        </tr>
+        <tr v-show="myData.length==0">
+            <td colspan="4" class="text-center text-muted">
+                <p>暂无数据....</p>
+            </td>
+        </tr>
+    </table>
+
+    <!--模态框 弹出框-->
+    <div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                    <h4 class="modal-title">确认删除么?</h4>
+                </div>
+                <div class="modal-body text-right">
+                    <button data-dismiss="modal" class="btn btn-primary btn-sm">取消</button>
+                    <button data-dismiss="modal" class="btn btn-danger btn-sm" v-on:click="deleteMsg(nowIndex)">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br/><br/><br/><br/>
+<!--baidu-->
+
+<div class="container" id="baidu">
+    <h3>jsonp模拟百度搜索</h3>
+    <br/>
+    <input type="text" v-model="t1" @keyup="get($event)" @keydown.down="changeDown()" @keydown.up.prevent="changeUp()">
+    <ul>
+        <li v-for="value in myDataB" :class="{gray:$index==now}">
+            {{value}}
+        </li>
+    </ul>
+    <p v-show="myDataB.length==0">暂无数据...</p>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

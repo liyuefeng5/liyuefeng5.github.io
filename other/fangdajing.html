@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <script>
+        window.onload=function(){
+            var oFangdajing=document.getElementById('fangdajing');
+            (function(){
+                var oFangdajing1=document.getElementById('fangdajing1');
+                var oSm=oFangdajing1.getElementsByTagName('div')[0];
+                var oSpan=oSm.getElementsByTagName('span')[0];
+                var oBg=oFangdajing1.getElementsByTagName('div')[1];
+                var oBg_img=oBg.getElementsByTagName('img')[0];
+
+                oSm.onmouseover=function(){
+                    oSpan.style.display='block';
+                    oBg.style.display='block';
+                }
+                oSm.onmousemove=function(ev){
+                    var ev=ev||event;
+                    var l=ev.clientX-oFangdajing1.offsetLeft;
+                    var t=ev.clientY-oFangdajing1.offsetTop;
+
+                    if(l<oSpan.offsetWidth/2){
+                        l=oSpan.offsetWidth/2;
+                    }
+                    if(l>oSm.offsetWidth-oSpan.offsetWidth/2){
+                        l=oSm.offsetWidth-oSpan.offsetWidth/2;
+                    }
+                    if(t<oSpan.offsetHeight/2){
+                        t=oSpan.offsetHeight/2;
+                    }
+                    if(t>oSm.offsetHeight-oSpan.offsetHeight/2){
+                        t=oSm.offsetHeight-oSpan.offsetHeight/2;
+                    }
+
+                    oSpan.style.left=l+'px';
+                    oSpan.style.top=t+'px';
+
+                    var disL=(l-oSpan.offsetWidth/2)/(oSm.offsetWidth-oSpan.offsetWidth)*(oBg.offsetWidth-oBg_img.offsetWidth);
+                    var disT=(t-oSpan.offsetHeight/2)/(oSm.offsetHeight-oSpan.offsetHeight)*(oBg.offsetHeight-oBg_img.offsetHeight);
+
+                    oBg_img.style.marginLeft=disL+'px';
+                    oBg_img.style.marginTop=disT+'px';
+                };
+                oSm.onmouseout=function(){
+                    oSpan.style.display='none';
+                    oBg.style.display='none';
+                }
+            })();
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="fangdajing">
+    <!--放大镜1-->
+    <div id="fangdajing1">
+            <div class="sm">
+                <img src="../img/m1.jpg" alt=""/>
+                <span></span>
+            </div>
+            <div class="bg">
+                <img src="../img/b1.jpg" alt=""/>
+            </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<style type="text/css">
+.countent{background-color:#09C; padding:50px;}
+.prize{width:180px;height:240px; float:left; margin:20px; position:relative; }
+.prize img{width:180px;height:240px;}
+.face{ position:absolute; top:0;left:0; z-index:0;}
+.back{ position:absolute; top:0;left:0;z-index:1;}
+.clearFix{ clear:both}
+.againOne{  border-radius:15px;-webkit-border-radius:15px; -moz-border-radius:15px; background-color:#FF0;
+font-family:"楷体"; font-size:18px; text-align:center;padding:15px 50px;}
+</style>
+</head>
+
+<body>
+<div class="countent">
+   <div id="prizeAll">
+     <div class="prize">
+         <div class="face"><img  src=""/></div>
+         <div class="back"><img  src="images/puke-back.png" /></div>
+     </div>
+     <div class="prize">
+         <div class="face"><img  src="" /></div>
+         <div class="back"><img  src="images/puke-back.png" /></div>
+     </div>
+     <div class="prize">
+         <div class="face"><img  src="" /></div>
+         <div class="back"><img  src="images/puke-back.png" /></div>
+     </div>
+     <div class="prize">
+         <div class="face"><img  src="" /></div>
+         <div class="back"><img  src="images/puke-back.png" /></div>
+     </div>
+     <div class="clearFix"></div>
+   </div>
+   <div>
+      <a class="againOne">洗牌</a>  
+   </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+      //洗牌方法
+function riffle()
+{
+    var prize=['images/2.jpg','images/3.jpg','images/puke-3.png','images/puke-4.png'];
+	for (var i=0;i<prize.length;i++)
+	    {
+		 var inx=Math.floor(Math.random()*prize.length);
+		 document.getElementsByClassName("face").item(i).getElementsByTagName("img").item(0).src=prize[inx];
+		}
+}
+function prizeClick()
+{
+
+	 $(".prize").on('click',function ()
+	 {
+		 /*这部分*/
+			$(this).children(".back").hide();
+			$(this).children(".face").animate({"wdith":180});
+				/*怎么翻转*/
+		 /*这部分结束*/
+			$(".prize").off('click');	
+	});
+
+}
+window.onload=function ()
+{	
+			riffle();
+			prizeClick();
+			$(".againOne").on('click',function ()
+			{
+					riffle();
+					prizeClick();
+					$(".prize").children(".back").show();
+		
+			});
+			
+}
+
+</script>
+
+</body>
+</html>

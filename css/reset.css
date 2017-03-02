@@ -1,0 +1,383 @@
+@charset "utf-8";
+/* CSS Document */
+/*格式化*/
+body,html{ height:100%; min-width:1000px;}
+body,height{ margin:0 auto; padding:0; border:0;}
+ul,li,ol{ list-style-type:none;}
+*{margin:0; padding:0; list-style:none;  font-family:"微软雅黑"; font-size:14px;box-sizing: border-box;}
+img{ border:0;  }
+a{ text-decoration:none; color:#333; cursor:pointer;  }
+/*公用样式*/
+button{
+       height: 45px;
+    line-height: 45px;
+    width: 90px;
+    background: #ff7243;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+	border:0;
+	outline:none;
+	}
+/*头部*/
+.header1{height:40px; width:100%;}
+.header1 .nav{ width:1000px; margin:0 auto; height:40px; line-height:40px; position:relative; overflow:hidden;}
+.header1 .nav ul{
+	position:absolute;
+	top:0px;
+	left:120px;
+	color:#ff7243
+	 }
+.header1 .nav .img1{ margin-top:13px;}
+.header1 .nav .span1{color:#4c5e6d}
+.header1 .nav .span2{ float:right; color:#4c5e6d; cursor:pointer;}
+.header1 .nav .span2:hover{color:#f3982d;height: 30px; border-bottom: 2px solid red}
+.header1 .nav .img2{ position:absolute; top:10px; left:160px;}
+.header1 .nav .img3{ position:absolute; top:10px; left:210px;}
+.header1 .nav .img4{ position:absolute; top:10px; left:260px;}
+.header1 .nav .login,.register{	
+  width:45px;
+  height:40px;
+  line-height:40px;
+  color:#4c5e6d;
+  float:right;
+  cursor:pointer;
+}
+.header1 .nav .login span:hover{color:#f3982d;height: 30px; border-bottom: 2px solid red}
+.header1 .nav .register span:hover{color:#f3982d;height: 30px; border-bottom: 2px solid red}
+/*登录*/
+#screen{	
+   height:100%;
+   width:100%;
+   position:absolute;
+   top:0px;
+   left:0px;
+   z-index:9998;
+   background:rgba(0,0,0,1);
+   filter: alpha(opacity=60);
+   opacity:0.6;
+   display:none;
+}
+#login{	
+   height:250px;
+   width:350px;
+   position:absolute;
+   left:33%;
+   top:150px;
+   z-index:9999;
+   background:rgba(255,255,255,1);
+   display:none;
+}
+#login h2{	
+   height:40px;
+   line-height:40px;
+   text-align:center;
+   background:url(../img/login_header.png) repeat-x;
+   border: 1px solid #ccc;
+   font-size:16px;
+   color:#666;
+   cursor:move;
+}
+#login h2 img{ float:right;
+   margin-top:12px; 
+   margin-right:10px;
+   cursor:pointer;
+}
+#login .user,.pass,.button{	
+   text-align:center;
+   color: #666;
+}
+#login .text{ width:200px; height:25px; 	
+   border:1px solid #ccc;
+   margin-top:20px;
+}
+#login .submit{	
+   width:107px;
+   height:30px;
+   background:url(../img/login_button.png);
+   border:none;
+   margin:20px auto;
+}
+#login .other{	
+    text-align: right;
+    padding: 8px 10px;
+    color: #666;
+}
+/*注册*/
+#register{	
+    width:600px;
+    height:595px;
+    border:1px solid; 
+	margin:0 auto;
+}
+#register h2{	
+   height:40px;
+   line-height:40px;
+   text-align:center;
+   background:url(../img/login_header.png) repeat-x;
+   border: 1px solid #ccc;
+   font-size:16px;
+   color:#666;
+   cursor:move;
+}
+#register h2 img{ float:right;
+   margin-top:12px; 
+   margin-right:10px;
+   cursor:pointer;
+}
+#register div{
+   margin-left:10px;	
+       position: relative;
+	}
+#register div span.user{	
+   font-size:12px;
+   color:#333;
+     height: 42px;
+    width: 165px;
+    display: block;
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    padding: 8px 35px;
+	display:none;
+}	
+#register div span.user_info{
+	background:url(../img/reg_info2.png) no-repeat;
+}
+#register div span.user_error{
+	background:url(../img/reg_error.png) no-repeat;
+}
+#register div span.user_succ{
+	background:url(../img/reg_succ.png) no-repeat 0px;
+	padding: 0px 21px;
+	height: 22px;
+    line-height: 22px;
+}
+#register div span.pass{	
+   font-size:12px;
+   color:#333;
+     height: 42px;
+    display: block;
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    padding: 8px 35px;
+	text-align:left;
+	display:none;
+}
+#register div span.pass_info{
+	background:url(../img/reg_info3.png) no-repeat;
+	height:106px;
+	width:260px;
+	top:-20px;
+	padding: 1px 20px;
+    line-height: 25px;
+}
+#register div span.pass_info p{
+    font-size:12px;	
+}
+#register div span.pass_info p strong{
+    color:#ccc;	
+}
+#register div span.pass_error{
+	background:url(../img/reg_error.png) no-repeat;
+	
+}
+#register div span.pass_succ{
+	background:url(../img/reg_succ.png) no-repeat 0px;
+	padding: 0px 21px;
+	height: 22px;
+    line-height: 22px;
+    
+}
+#register div img#eye{	
+   position: absolute;left: 250px;top: 25px;
+   z-index:1;
+}
+#register div img#eye1{	
+   position: absolute;left: 250px;top: 25px;
+   z-index:1;
+}
+#register div span.againpass{	
+   font-size:12px;
+   color:#333;
+     height: 42px;
+    width: 165px;
+    display: block;
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    padding: 8px 35px;
+	display:none;
+}	
+#register div span.againpass_info{
+	background:url(../img/reg_info.png) no-repeat;
+	
+}
+#register div span.againpass_error{
+	background:url(../img/reg_error.png) no-repeat;
+	
+}
+#register div span.againpass_succ{
+	background:url(../img/reg_succ.png) no-repeat 0px;
+	padding: 0px 21px;
+	height: 22px;
+    line-height: 22px;
+	
+}
+#register div span.ans{	
+   font-size:12px;
+   color:#333;
+     height: 42px;
+    width: 165px;
+    display: block;
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    padding: 8px 35px;
+	display:none;
+}	
+#register div span.ans_info{
+	background:url(../img/reg_info.png) no-repeat;
+
+}
+#register div span.ans_error{
+	background:url(../img/reg_error.png) no-repeat;
+	
+}
+#register div span.ans_succ{
+	background:url(../img/reg_succ.png) no-repeat 0px;
+	padding: 0px 21px;
+	height: 22px;
+    line-height: 22px;
+	
+}
+#register .all_email{
+	display:none;
+    position: absolute;
+    left: 83px;
+    z-index: 1;
+	width:200px;
+	height:130px;
+	line-height: 25px;
+	border: 1px solid #ccc;
+	background: #fff;
+    padding: 5px 10px
+}
+#register .all_email li{
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 1px solid #e5edf2;
+    padding: 0 5px;
+    cursor: pointer;
+}
+#register .all_email li:hover{	
+   color:rgb(51,102,153);
+   background:rgba(204,204,204,1);
+}
+#register div span.e_m{	
+   font-size:12px;
+   color:#333;
+     height: 42px;
+    width: 165px;
+    display: block;
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    padding: 8px 35px;
+	display:none;
+}	
+#register div span.e_m_info{
+	background:url(../img/reg_info.png) no-repeat;
+
+}
+#register div span.e_m_error{
+	background:url(../img/reg_error.png) no-repeat;
+	
+}
+#register div span.e_m_succ{
+	background:url(../img/reg_succ.png) no-repeat 0px;
+	padding: 0px 21px;
+	height: 22px;
+    line-height: 22px;
+	
+}
+#register .text{ width:200px; height:25px; 	
+   border:1px solid #ccc;
+   margin-top:20px;
+   outline:none;
+}
+#register select{ width:60px; height:25px; 	
+   border:1px solid #ccc;
+   margin-top:20px;
+}
+#register textarea{ width:305px; height:80px; 	
+   border:1px solid #ccc;
+   margin-top:20px;
+   vertical-align:-70px;
+}
+#register button{margin-left:94px;margin-top:20px}
+/*头部导航滑动*/
+.header2{height:80px; width:100%;}
+.header2 .nav{ width:1000px; margin:0 auto; height:80px; line-height:80px; text-align:left; font-size:40px; color:#FFF; position:relative}
+.header2 .nav .nav_bbg{	
+    width: 465px;
+    height: 52px;
+    background:url(../img/nav_bg.png) no-repeat;
+	    position: absolute;
+    top: 10px;
+}
+.header2 .nav .nav_bg{	
+    position:relative;
+    width: 465px;
+    height: 52px;
+	z-index:1;
+ }
+.header2 .nav .nav_bg li{ float:left; color:#000;
+ cursor:pointer;height: 52px; line-height:53px; text-align:center;
+ font-size:12px;
+ width: 85px;
+ }
+
+.header2 .nav .p1{ font-size:40px; color:#4c5e6d;}
+.header2 .nav .p2{ 
+   font-size: 20px;
+    color: #fff;
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    height: 40px;
+    line-height: 40px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+	-webkit-border-radius: 5px;
+    background: #ff7243;
+}
+.header2 .nav .nav_over{	
+   height:30px;
+   width:85px;
+   background:url(../img/nav_over.png) no-repeat;
+   position:absolute;
+  left: 15px;
+    top: 21px;
+   z-index:2;
+   overflow:hidden;
+}
+ #white{	  
+    position:absolute;
+	z-index:2;
+	top: -12px;
+	left:0;
+ }
+ #white li{ float:left; color:#ffffff;
+ cursor:pointer;height: 52px; line-height:53px; text-align:center;
+ font-size:12px;
+ width: 85px;
+ }
+/*底部*/
+.footer{ background:url(../img/fenxiang2.png) center no-repeat; height:35px; width:35px; cursor:pointer; position:fixed; bottom:10px; right:10%; transition:all 1s ease-in-out;}

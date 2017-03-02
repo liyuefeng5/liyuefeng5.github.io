@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        div{ width: 200px; height: 200px; background: red; position: absolute;
+            top: 50%; margin-top: -100px; left: 50%; margin-left: -100px;
+            -webkit-transition: .4s all ease;
+        }
+    </style>
+    <script>
+        document.addEventListener('touchstart',function(ev){
+            ev.preventDefault()
+        },false);
+
+        document.addEventListener('DOMContentLoaded',function(){
+           var oBox=document.querySelector('div');
+            var s=1
+            var oldS=1;
+
+            oBox.addEventListener('touchstart',function(ev){
+
+                oldS=s;
+                if(ev.targetTouches.length==2){
+
+                    var downC=getC(ev);
+                }
+                function getC(ev){
+                    var x1=ev.targetTouches[0].pageX;
+                    var y1=ev.targetTouches[0].pageY;
+
+                    var x2=ev.targetTouches[1].pageX;
+                    var y2=ev.targetTouches[1].pageY;
+
+                    var a=x1-x2;
+                    var b=y1-y2;
+                    return Math.sqrt(a*a,b*b)
+                }
+                document.addEventListener('touchmove',fnMove,false);
+                document.addEventListener('touchend',fnEnd,false);
+                function fnEnd(){
+                    document.removeEventListener('touchmove',fnMove,false);
+                    document.removeEventListener('touchend',fnEnd,false);
+                }
+                function fnMove(ev){
+
+                    if(ev.targetTouches.length==2){
+                        s=oldS*getC(ev)/downC;
+
+                        oBox.style.transform='scale('+s+')';
+                    }
+                    ev.preventDefault();
+                }
+            },false)
+        },false);
+    </script>
+</head>
+<body>
+<div></div>
+</body>
+</html>

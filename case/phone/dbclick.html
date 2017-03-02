@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        div{ width: 200px; height: 200px; background: red; position: absolute;
+            top: 50%; margin-top: -100px; left: 50%; margin-left: -100px;
+            -webkit-transition: .4s all ease;
+        }
+    </style>
+    <script>
+        document.addEventListener('touchstart',function(ev){
+            ev.preventDefault();
+        },false)
+        document.addEventListener('DOMContentLoaded',function(){
+            var oBox=document.querySelector('div');
+            var show=true;
+            todbclick(oBox,function(){
+                if(show==true){
+                    oBox.style.WebkitTransform='scale(0.5)';
+                }else{
+                    oBox.style.WebkitTransform='scale(1)';
+                }
+                show=!show;
+            })
+        },false);
+        function todbclick(obj,fn){
+            var flag=false;
+            obj.addEventListener('touchstart',function(){
+                if(flag==true){
+                        fn&&fn.call(obj)
+                }
+                flag=true
+                setTimeout(function(){
+                    flag=false;
+                },300)
+            },false);
+        }
+    </script>
+</head>
+<body>
+<div></div>
+</body>
+</html>
